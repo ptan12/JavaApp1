@@ -43,7 +43,7 @@ public class TestMain {
 		}
 
 		
-//		System.out.println(mySet);
+		System.out.println(pep);
 //		System.out.println(myAl.get(0));
 /*
 		for (int i = 0; i < mySet.size(); i ++)
