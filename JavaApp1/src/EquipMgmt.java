@@ -14,13 +14,21 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import javafx.collections.FXCollections;
+//import displaycontactlist.Contact;
+//import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class EquipMgmt {
 
 	static ArrayList<People> peopleList= new ArrayList();
 //	static Set<People> mySet = new LinkedHashSet<People>();
 	static ArrayList<Equipment> equipmentList = new ArrayList();
 	
-	public ArrayList<People> getStudentList() {
+    static ObservableList<Student> studentList; 
+    static ArrayList<Student> stList= new ArrayList();
+	
+	public ArrayList<People> getPeopleList() {
 		// TODO Auto-generated method stub
 		try {
 			loadPeopleFile();
@@ -100,5 +108,50 @@ public class EquipMgmt {
 		}
 		reader.close();
 	}	
+	
+	
+	static public ObservableList<Student> getStudentList() {
+		// TODO Auto-generated method stub
+		try {
+			loadStudentFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return studentList;
+
+	}
+	
+	static void loadStudentFile() throws IOException {
+		FileReader file = new FileReader("People.csv");
+		BufferedReader reader = new BufferedReader(file);
+		
+		String line;
+		//int r = 0;
+		while ((line = reader.readLine()) != null) {
+			String[] aLine = line.split(",");
+//			if (allData == null) {
+//				allData = new String[2][aLine.length];
+//			}
+			
+			Student student = new Student();
+			student.setId(aLine[0]);
+			student.setFirstName(aLine[1]);
+			student.setLastName(aLine[2]);
+			student.setAddress(aLine[3]);
+			student.setCity(aLine[4]);
+			student.setState(aLine[5]);
+			student.setZip(aLine[6]);
+			
+			stList.add(student);
+	
+
+
+		}
+		studentList =FXCollections.observableArrayList(stList);
+		reader.close();
+	}
+	
 	
 }

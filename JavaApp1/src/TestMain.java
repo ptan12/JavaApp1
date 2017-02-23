@@ -19,7 +19,7 @@ public class TestMain {
 	
 	public static void main(String[] args) {
 		
-		myAl = equipmgmt.getStudentList();
+		myAl = equipmgmt.getPeopleList();
 		
 		People pep = new People();
 		
