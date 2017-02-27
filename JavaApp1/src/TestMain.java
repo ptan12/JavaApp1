@@ -9,6 +9,7 @@ public class TestMain {
 
 	
 	// Update from Dell
+	//Update from Lenovo
 
 	//static String[][] allData;
 	static ArrayList<People> myAl = new ArrayList();
