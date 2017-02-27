@@ -31,7 +31,11 @@ import javafx.stage.Stage;
  * 
  * Dell Update
  * 
+<<<<<<< HEAD
  * Dell Update 2
+=======
+ * Lenovo Update
+>>>>>>> refs/remotes/origin/master
  */
 public class TestFX extends Application {
 	
