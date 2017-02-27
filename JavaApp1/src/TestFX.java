@@ -30,6 +30,8 @@ import javafx.stage.Stage;
  * @author Peggy Fisher
  * 
  * Dell Update
+ * 
+ * Lenovo Update
  */
 public class TestFX extends Application {
 	
